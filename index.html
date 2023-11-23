@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How many Chicken Nuggets Do You Weigh?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="nuggetFav.png">
+</head>
+<body>
+
+    <div class="margin"></div>
+    <div class="box">
+    <h1>How Many Chicken Nuggets Do You Weigh?</h1>
+    <p>Your weight in pounds:</p>
+    <form action="show.html" onsubmit="checkForInput()" name="Nugget">
+        <input type="number" id="lbs" name="nuggets">
+        <br>
+        <input type="submit" onclick="nuggetConversion(); checkForInput();" value="Calculate!">
+    </form>
+    <br>
+</div>
+    <script>
+        function nuggetConversion(){
+            var weight = document.getElementById("lbs").value;
+            let x = weight/0.05;
+            let y = weight/11000;
+            let a = weight/0.5;
+            let b = weight/30;
+            let c = weight/395;
+            let d = weight/260;
+            localStorage.setItem("nuggets", x)
+            localStorage.setItem("elephantWeight", y)
+            localStorage.setItem("bigMac", a)
+            localStorage.setItem("turkeys", b)
+            localStorage.setItem("shaq", c)
+            localStorage.setItem("lizzo", d)
+
+        function checkForInput(){
+            var x = document.forms["Nugget"]["nuggets"].value;
+            if (x == "0"){
+                alert("Dude, you didn't want to put an input in :/ -Logan");
+                return false;
+            }
+            
+        }
+        }
+
+    </script>
+
+    <footer>®All Rights Reserved. Please do not reproduce any content. Website created By Logan McDermott®</footer><br>
+    <footer>Check more of my websites: <a class="link" href="https://loganius-ii.github.io/banana/">bananaholder.com</a>, <a class="link" href="https://loganius-ii.github.io/cookieclicker/">cookieclicker.com</a></footer>
+</body>
+</html>

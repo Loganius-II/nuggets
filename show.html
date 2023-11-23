@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="nuggetFav.png">
+</head>
+<body>
+
+    <a href="index.html">Go Back</a>
+    <div class="back"><p>HELOO WEOLFD</p></div>
+    <div class="margin"></div>
+    <h1 id="quoteJoke">Did you know that Roger C. Baker invented chicken nuggets?</h1>
+    <div class="box">
+    <h1>You Weigh</h1>
+    <h1 id="dividend"></h1>
+    <hr>
+    <div class="gridcontainer">
+        <div class="grid-item">
+            <p>*You can fit about <bold>8,700 chicken nuggets</bold> in a bathtub, thats <bold>435 lbs</bold>!</p>
+            <br>
+            <p>*The Eifel Tower is around <bold>6769</bold> chicken nuggets tall.</p>
+            <br>
+            <p>*The current world record of most chicken nuggets eaten in a minute is 775 grams</p>
+            <br>
+            <p>*The heaviest chicken nugget <bold>ever</bold> was over <bold>55 pounds</bold></p>
+        </div>
+        <div class="grid-item">
+            <h2>You also Weigh...</h2>
+            <p id="elephant"></p>
+            <p id="bigmac"></p>
+            <p id="turkey"></p>
+            <p id="shaq"></p>
+            <p id="lizz"></p>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("dividend").innerHTML = localStorage.getItem("nuggets") + " Chicken Nuggets!";
+        document.getElementById("elephant").innerHTML = localStorage.getItem("elephantWeight") + " elephants!";
+        document.getElementById("bigmac").innerHTML = localStorage.getItem("bigMac") + " big macs!";
+        document.getElementById("turkey").innerHTML = localStorage.getItem("turkeys") + " turkeys!";
+        document.getElementById("shaq").innerHTML = localStorage.getItem("shaq") + " Shaquille O'Neals!"
+        document.getElementById("lizz").innerHTML = localStorage.getItem("lizzo") + "lizzos!"
+        let titles = ["What do you call a nugget that is feeling shy? A chicken tender!","[chicken nuggets]They were the only food I could properly trust which wouldn’t affect my stomach.  ~Usane Bolt", "Why did the chicken nugget go to school? To get breader education!", "The chicken tried to impress the farmer by doing acrobatics, but it ended up laying an egg instead.", "I'm prabably 95% chicken nugget ~Jeff Kinney"]
+        let currentIndex = 0;
+        let aSpan = document.getElementById('quoteJoke');
+
+        setInterval(() => {
+        
+        aSpan.innerHTML= titles[currentIndex];   
+        
+        currentIndex++;
+        
+        if (currentIndex === 5)
+            currentIndex = 0;
+
+        }, 9000)
+    </script>
+    <footer>®All Rights Reserved. Please do not reproduce any content. Website created By Logan McDermott®</footer><br>
+    <footer>Check more of my websites: <a class="link" href="https://loganius-ii.github.io/banana/">bananaholder.com</a>, <a class="link" href="https://loganius-ii.github.io/cookieclicker/">cookieclicker.com</a></footer>
+</body>
+</html>
